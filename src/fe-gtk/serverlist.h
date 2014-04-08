@@ -27,6 +27,10 @@ struct defaultserv
 
 static const struct defaultserv dserv[] =
 {
+	{"", "SUB", "Freenode", 1},
+	{"", "irc.freenode.net", "Freenode", 6667},
+	{"", "ENDSUB", "", 0},
+
 	{"", "SUB", "ChatJunkiesNet", 1},
 	{"#linux", "irc.xchat.org", "ChatJunkiesNet Random Server #linux", 6667},
 	{"#linux", "us.xchat.org", "ChatJunkiesNet U.S. Server #linux", 6667},
