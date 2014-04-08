@@ -580,21 +580,9 @@ load_config (void)
 	{
 #ifndef WIN32
 
-#ifdef __EMX__
 		/* OS/2 uses UID 0 all the time */
 		fe_message (_("The default download directory is your\n"
 						"home dir, you should change this at some stage."), TRUE);
-#else
-		if (getuid () == 0)
-			fe_message (_("* Running IRC as root is stupid! You should\n"
-							"  create a User Account and use that to login.\n\n"
-							"* The default download directory is your\n"
-							"  home dir, you should change this at some stage."),
-							TRUE);
-		else
-			fe_message ("The default download directory is your\n"
-							"home dir, you should change this at some stage.", TRUE);
-#endif
 
 #endif /* !WIN32 */
 		/* put in default values, anything left out is automatically zero */
